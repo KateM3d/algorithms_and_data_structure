@@ -56,7 +56,7 @@ Stack.prototype.pop = function() {
         return "No element inside the stack. Add element before poping.";
     }
 
-    var value = this._storage[--this._count];
+    let value = this._storage[--this._count];
     delete this._storage[this._count];
     if (this._count < 0) {
         this._count = 0;
@@ -73,16 +73,6 @@ Stack.prototype.peek = function() {
 Stack.prototype.count = function() {
     return this._count;
 };
-
-// var myStack = new Stack(3);
-// console.log(myStack.push('a'), 'should be 1');
-// console.log(myStack.push('b'), 'should be 2');
-// console.log(myStack.push('c'), 'should be 3');
-// console.log(myStack.push('d'), 'should be Max capacity reached');
-// console.log(myStack.pop(), 'should be c');
-// console.log(myStack.count(), 'should be 2');
-// console.log(myStack.peek(), 'should be b');
-// console.log(myStack.count(), 'should be 2');
 
 //____________________________________________
 // Implement a min stack
@@ -110,7 +100,7 @@ MinStack.prototype.push = function(value) {
 // O(1)
 MinStack.prototype.pop = function() {
     this._min.pop();
-    var value = this._storage[--this._count];
+    let value = this._storage[--this._count];
     delete this._storage[this._count];
     if (this._count < 0) {
         this._count = 0;
