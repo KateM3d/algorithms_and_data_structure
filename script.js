@@ -101,7 +101,6 @@ const uniqueSort = (arr) => {
     const result = [];
 
     for (let i = 0; i < arr.length; i++) {
-        //the loop starts at 1, because we are asuming that the very first item is not a duplicate
         if (!breadcrumps[arr[i]]) {
             result.push(arr[i]);
             console.log(result);
@@ -113,3 +112,20 @@ const uniqueSort = (arr) => {
 };
 
 uniqueSort([4, 2, 2, 3, 2, 2, 2]);
+
+//MEMOIZATION
+
+//Task1 write a function times10, that takes an argument n and multiples n 10 times
+
+const times10 = (n) => {
+    return 10 * n;
+};
+console.log("task1:", times10(2));
+
+//task2 use an object to cache the result of times10 function.
+
+const cache = {};
+const memoTimes10 = (n) => {};
+console.log(`task1: ${memoTimes10(2)}`);
+
+//
